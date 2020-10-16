@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Typing Game</title>
+</head>
+
+<body>
+    <div id="start-game">    
+        <div id="settings" class="settings">
+            <h1>Chọn level Game</h1>
+            <form id="settings-form">
+                <div>
+                    <select id="level">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+            </form>
+            <button id="btn-start-game">Bắt đầu</button>
+        </div>
+    </div>
+
+    <div class="container hide">
+        <div class="container-inner">
+            <h2>Typing Game</h2>
+            <div class="option">
+                <p class="time-container">Thời gian: <span id="time">20s</span></p>
+                <p class="score-container">Điểm: <span id="score">0</span></p>
+            </div>
+            <div class="game">
+                <p>Nhập nội dung sau:</p>
+                <div class="word-container">
+                    <h1 id="word"></h1>
+                </div>
+                <input type="text" id="text" autocomplete="off" placeholder="Nhập từ ở đây..." />
+            </div>
+            <div id="end-game-container" class="end-game-container">
+                <h1>Hết giờ</h1>
+                <p>Điểm của bạn là: <span class="score"></span></p>
+                <button id="btn-reload-game">Chơi lại</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
