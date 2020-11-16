@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container-wrapper">
+        <div class="toggle-wrapper">
+            <div class="toggle">
+                <input id="toggle-handle" type="checkbox" class="toggle-handle">
+                <label for="toggle-handle" class="toggle-container"></label>
+            </div>
+        </div>
+        
+        <h2 class="title text-center">Calculator</h2>
+
+        <!-- Tính toán + Hiện kết quả -->
+        <div class="c-input">
+            <!-- Biểu thức -->
+            <div class="c-ex"></div>
+
+            <!-- Kết quả -->
+            <div class="c-result"></div>
+        </div>
+
+        <!-- Danh sách số + biểu thức -->
+        <div class="c-board">
+            <table>
+                <tr>
+                    <td><span class="char num-input" char="(">(</span></td>
+                    <td><span class="char num-input" char=")">)</span></td>
+                    <td><span class="char del">DEL</span></td>
+                    <td colspan="2"><span class="char clear">CLEAR</span></td>
+                </tr>
+                <tr>
+                    <td><span class="number num-input" char="7">7</span></td>
+                    <td><span class="number num-input" char="8">8</span></td>
+                    <td><span class="number num-input" char="9">9</span></td>
+                    <td><span class="char num-input" char="%">&percnt;</span></td>
+                    <td><span class="char sqrt">&radic;</span></td>
+                </tr>
+                <tr>
+                    <td><span class="number num-input" char="4">4</span></td>
+                    <td><span class="number num-input" char="5">5</span></td>
+                    <td><span class="number num-input" char="6">6</span></td>
+                    <td><span class="char num-input" char="*">&times;</span></td>
+                    <td><span class="char num-input" char="/">&divide;</span></td>
+                </tr>
+                <tr>
+                    <td><span class="number num-input" char="1">1</span></td>
+                    <td><span class="number num-input" char="2">2</span></td>
+                    <td><span class="number num-input" char="3">3</span></td>
+                    <td><span class="char num-input" char="+">&plus;</span></td>
+                    <td><span class="char num-input" char="-">&minus;</span></td>
+                </tr>
+                <tr>
+                    <td><span class="char num-input" char=".">&#x2219;</span></td>
+                    <td><span class="number num-input" char="0">0</span></td>
+                    <td><span class="char switch">&plusmn;</span></td>
+                    <td colspan="2"><span class="char enter">=</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
