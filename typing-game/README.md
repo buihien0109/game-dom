@@ -15,7 +15,7 @@ Game này sẽ có 3 màn chơi:
 - Thông báo kết quả trong suốt quá trình cào phím của người chơi
 - Nếu cảm thấy không phục với quá trình khổ luyện bao lâu nay, người chơi có thể bấm "chơi lại" để chinh phục những đỉnh cao khác
 
-## 2. Chi tiết các bước trong ứng dụng Calculator
+## 2. Chi tiết các bước trong game Typing
 
 - Part-1 : Tạo giao diện cho Game
 - Part-2 : Ẩn/hiện các màn chơi

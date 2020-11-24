@@ -19,7 +19,7 @@ Ngoài ra còn các thành phần khác
 - Ai đạt được số điểm => số điểm nhập | điểm cố định đầu game thì người đó thắng cuộc
 - Khi người chơi thắng cuộc cần thông báo cho người chơi
 
-## Chi tiết các bước trong game Roll Dice
+## 3. Chi tiết các bước trong game Roll Dice
 - Part-1 : Giao diện game
 - Part-2 : Set up các thuộc tính ban đầu cho game
 - Part-3 : Xử lý khi lắc xúc xắc

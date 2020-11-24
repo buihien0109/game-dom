@@ -7,7 +7,7 @@
 
 - Khi người chơi mở hết các card giống nhau, phần popup thông báo người chiến thắng sẽ được hiển thị ra, thông báo số lượt di chuyển và thời gian hoàn thành game cho người chơi
 
-## 2. Chi tiết các bước trong ứng dụng Calculator
+## 2. Chi tiết các bước trong game Memory Card
 
 - Part-1 : Tạo giao diện cho Game
 - Part-2 : Đảo vị trí card
