@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <h1>Giới thiệu về Local Storage</h1>
+
+    <script>
+        if(typeof(Storage) !== "undefined") {
+            console.log('Có hỗ trợ');
+        } else {
+            console.log('Không hỗ trợ');
+        }
+
+        localStorage.setItem('name', 'Ngô B');
+        localStorage.setItem('number', '1');
+        localStorage.setItem('isStatus', 'false');
+
+        let name = localStorage.getItem('name');
+        console.log(name);
+
+        let count = localStorage.length;
+        console.log(count);
+
+        localStorage.removeItem('name');
+
+        localStorage.clear();
+    </script>
+</body>
+
+</html>
