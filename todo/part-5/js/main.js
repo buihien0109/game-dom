@@ -3,6 +3,9 @@ const todo_list = document.querySelector('.todo-list');
 const todo_input = document.querySelector('#todo-input');
 const btn_add = document.querySelector('#btn-add');
 
+let isUpdate = false;
+let idUpdate = null;
+
 function createId() {
     let id = Math.floor(Math.random() * 100000);
     return id;
@@ -33,13 +36,30 @@ btn_add.addEventListener('click', function() {
         return 
     }
 
-    let newTodo = {
-        id : createId(),
-        title : todoTitle,
-        status : false
+    if(isUpdate) {
+        // Update công việc
+        for(let i = 0; i < todos.length; i++) {
+            if(todos[i].id == idUpdate) {
+                todos[i].title = todoTitle
+            }
+        }
+
+        btn_add.innerText = "Thêm";
+        isUpdate = false;
+        idUpdate = null;
+        
+    } else {
+        // Thêm công việc
+        let newTodo = {
+            id : createId(),
+            title : todoTitle,
+            status : false
+        }
+    
+        todos.push(newTodo);
     }
 
-    todos.push(newTodo);
+
 
     renderUI(todos);
     todo_input.value = "";
@@ -63,7 +83,7 @@ function renderUI(arr) {
                     <p>${t.title}</p>
                 </div>
                 <div class="option">
-                    <button class="btn btn-update">
+                    <button class="btn btn-update" onclick="updateTodo(${t.id})">
                         <img src="./img/pencil.svg" alt="icon">
                     </button>
                     <button class="btn btn-delete">
@@ -73,6 +93,23 @@ function renderUI(arr) {
             </div>
         `
     }
+}
+
+function updateTodo(id) {
+    let title
+    for (let i = 0; i < todos.length; i++) {
+        if (todos[i].id == id) {
+            title = todos[i].title;
+        }
+    }
+
+    btn_add.innerText = "CẬP NHẬT";
+
+    todo_input.value = title;
+    todo_input.focus();
+
+    idUpdate = id;
+    isUpdate = true;
 }
 
 function deleteTodo(id) {
